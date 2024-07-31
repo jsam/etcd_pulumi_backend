@@ -30,7 +30,7 @@ func NewEtcdBackend(client EtcdClientInterface, prefix string) *EtcdBackend {
 
 func (b *EtcdBackend) GetStackCrypter(stackName tokens.QName) (config.Crypter, error) {
 	InfoLogger.Printf("Getting stack crypter for %s", stackName)
-	return config.NewSymmetricCrypter(nil)
+	return config.NewSymmetricCrypter(nil), nil
 }
 
 func (b *EtcdBackend) GetStack(ctx context.Context, stackName tokens.QName) ([]byte, error) {
