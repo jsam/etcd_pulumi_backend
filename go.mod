@@ -1,4 +1,4 @@
-module github.com/jsam/etcdkit
+module github.com/jsam/etcd-pulumi-backend
 
 go 1.22.5
 
